@@ -1,7 +1,8 @@
 package net.levim.dust;
 
 import com.mojang.logging.LogUtils;
-import net.levim.dust.Item.ModItems;
+import net.levim.dust.item.ModCreativeModeTabs;
+import net.levim.dust.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -31,6 +32,8 @@ public class Dust
 
         ModItems.register(modEventBus);
 
+        ModCreativeModeTabs.register(modEventBus);
+
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
@@ -54,6 +57,7 @@ public class Dust
     {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.DUST);
+            event.accept(ModItems.EVIL_DUST);
         }
     }
 
