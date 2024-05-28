@@ -1,4 +1,8 @@
 {
   "item.justdust.dust": "Dust",
-  "item.justdust.evil_dust": "Evil Dust"
+  "item.justdust.evil_dust": "Evil Dust",
+
+  "block.justdust.dust_block": "Dust Block",
+
+  "creativetab.dust_tab": "Dust"
 }

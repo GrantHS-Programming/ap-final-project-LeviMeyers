@@ -1,6 +1,8 @@
 package net.levim.dust;
 
 import com.mojang.logging.LogUtils;
+import net.levim.dust.block.ModBlocks;
+import net.levim.dust.item.ModCreativeModeTabs;
 import net.levim.dust.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -29,7 +31,10 @@ public class Dust
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModCreativeModeTabs.register(modEventBus);
+
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
