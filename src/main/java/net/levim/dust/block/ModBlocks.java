@@ -1,11 +1,13 @@
 package net.levim.dust.block;
 
+import com.mojang.serialization.MapCodec;
 import net.levim.dust.Dust;
 import net.levim.dust.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.FallingBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.PushReaction;
@@ -19,8 +21,13 @@ import java.util.function.Supplier;
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Dust.MOD_ID);
 
-    // if line 23 fails, delete everything  under properties except block.white_wool and maybe soundtype
-    public static final RegistryObject<Block> DUST_BLOCK = registerBlock("dust_block", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL).sound(SoundType.COBWEB).noCollission().pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> DUST_BLOCK = registerBlock("dust_block", () -> new FallingBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL).sound(SoundType.COBWEB).noCollission().pushReaction(PushReaction.DESTROY)) {
+        @Override
+        protected MapCodec<? extends FallingBlock> codec() {
+            return null;
+        }
+    });
+    public static final RegistryObject<Block> DUSTY_CRAFTING_TABLE = registerBlock("dusty_crafting_table", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

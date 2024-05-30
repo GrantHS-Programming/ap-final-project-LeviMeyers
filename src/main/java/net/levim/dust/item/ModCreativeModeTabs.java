@@ -21,6 +21,7 @@ public class ModCreativeModeTabs {
                 pOutput.accept(ModItems.EVIL_DUST.get());
 
                 pOutput.accept(ModBlocks.DUST_BLOCK.get());
+                pOutput.accept(ModBlocks.DUSTY_CRAFTING_TABLE.get());
             })
             .build());
 

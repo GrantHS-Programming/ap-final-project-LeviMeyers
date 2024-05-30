@@ -61,6 +61,9 @@ public class Dust
             event.accept(ModItems.DUST);
             event.accept(ModItems.EVIL_DUST);
         }
+        if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
+            event.accept(ModBlocks.DUST_BLOCK);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

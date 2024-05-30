@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "minecraft:block/oak_planks",
+    "east": "justdust:block/dusty_crafting_table_side",
+    "north": "justdust:block/dusty_crafting_table_front",
+    "particle": "justdust:block/dusty_crafting_table_front",
+    "south": "justdust:block/dusty_crafting_table_side",
+    "up": "justdust:block/dusty_crafting_table_top",
+    "west": "justdust:block/dusty_crafting_table_front"
+  }
+}
