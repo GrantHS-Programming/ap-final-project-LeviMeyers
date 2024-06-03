@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "justdust:dust_block"
+    }
+  ],
+  "result": {
+    "item": "justdust:dust",
+    "count": 4
+  }
+}

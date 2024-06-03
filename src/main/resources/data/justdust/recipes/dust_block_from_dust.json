@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "justdust:dust"
+    }
+  },
+  "result": {
+    "item": "justdust:dust_block"
+  }
+}

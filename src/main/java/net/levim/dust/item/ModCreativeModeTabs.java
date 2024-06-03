@@ -18,6 +18,7 @@ public class ModCreativeModeTabs {
             .title(Component.translatable("creativetab.dust_tab"))
             .displayItems((pParameters, pOutput) -> {
                 pOutput.accept(ModItems.DUST.get());
+                pOutput.accept(ModItems.COMPACTED_DUST.get());
                 pOutput.accept(ModItems.EVIL_DUST.get());
 
                 pOutput.accept(ModBlocks.DUST_BLOCK.get());

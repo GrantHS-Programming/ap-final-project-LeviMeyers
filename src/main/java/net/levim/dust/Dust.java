@@ -59,7 +59,7 @@ public class Dust
     {
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.DUST);
-            event.accept(ModItems.EVIL_DUST);
+            event.accept(ModItems.COMPACTED_DUST);
         }
         if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
             event.accept(ModBlocks.DUST_BLOCK);
