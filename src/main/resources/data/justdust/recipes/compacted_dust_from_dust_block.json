@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "justdust:dust_block"
+    }
+  },
+  "result": {
+    "id": "justdust:compacted_dust"
+  }
+}

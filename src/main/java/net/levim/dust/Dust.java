@@ -63,6 +63,7 @@ public class Dust
         }
         if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
             event.accept(ModBlocks.DUST_BLOCK);
+            event.accept(ModBlocks.DUST_LAYER);
         }
     }
 
