@@ -1,7 +1,7 @@
 {   "parent": "block/thin_block",
   "textures": {
-    "particle": "block/snow",
-    "texture": "block/snow"
+    "particle": "justdust:block/dust_block",
+    "texture": "justdust:block/dust_block"
   },
   "elements": [
     {   "from": [ 0, 0, 0 ],
