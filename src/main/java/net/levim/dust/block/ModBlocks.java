@@ -18,7 +18,7 @@ import java.util.function.Supplier;
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Dust.MOD_ID);
 
-    public static final RegistryObject<Block> DUST_BLOCK = registerBlock("dust_block", () -> new FallingBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL).sound(SoundType.COBWEB).pushReaction(PushReaction.DESTROY).strength(0.4F)) {
+    public static final RegistryObject<Block> DUST_BLOCK = registerBlock("dust_block", () -> new FallingBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL).sound(SoundType.COBWEB).pushReaction(PushReaction.DESTROY).strength(0.1F).noCollission().requiresCorrectToolForDrops()) {
         @Override
         protected MapCodec<? extends FallingBlock> codec() {
             return null;
