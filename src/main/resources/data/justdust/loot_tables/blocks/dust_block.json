@@ -29,18 +29,44 @@
               "name": "justdust:dust_block"
             },
             {
-              "type": "minecraft:item",
-              "functions": [
+              "type": "minecraft:alternatives",
+              "children": [
                 {
-                  "add": false,
-                  "count": 4.0,
-                  "function": "minecraft:set_count"
+                  "type": "minecraft:item",
+                  "conditions": [
+                    {
+                      "chances": [
+                        0.001,
+                        0.0013,
+                        0.0016,
+                        0.0019
+                      ],
+                      "condition": "minecraft:table_bonus",
+                      "enchantment": "minecraft:fortune"
+                    }
+                  ],
+                  "name": "justdust:evil_dust"
                 },
                 {
-                  "function": "minecraft:explosion_decay"
+                  "type": "minecraft:item",
+                  "functions": [
+                    {
+                      "add": false,
+                      "count": 4.0,
+                      "function": "minecraft:set_count"
+                    },
+                    {
+                      "function": "minecraft:explosion_decay"
+                    }
+                  ],
+                  "name": "justdust:dust"
                 }
               ],
-              "name": "justdust:dust"
+              "conditions": [
+                {
+                  "condition": "minecraft:survives_explosion"
+                }
+              ]
             }
           ]
         }
@@ -48,5 +74,5 @@
       "rolls": 1.0
     }
   ],
-  "random_sequence": "justdust:blocks/dust_block"
+  "random_sequence": "minecraft:blocks/dust_block"
 }
